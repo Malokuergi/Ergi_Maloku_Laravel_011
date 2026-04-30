@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\MainController;
 use App\Models\Book;
@@ -15,6 +16,8 @@ Route::get('/Accendi', [MainController::class, "login"])->name("accedi");
 Route::get('/modifica-libri/{book}', [BookController::class, "edit"])->name("edit");
 Route:: put('/aggiorna{book}', [BookController::class, "update"])->name("update");
 Route::delete('/elimina-libro{book}', [BookController::class, "destroy"])->name("destroy");
+
+Route::resource('authors', AuthorController::class);
 
 
 

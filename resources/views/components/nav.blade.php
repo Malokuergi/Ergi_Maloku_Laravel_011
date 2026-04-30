@@ -21,6 +21,7 @@
                 @endauth
                 @auth
                     <li class="nav-item "><a class="nav-link active text-success fw-bold" href="{{ route('creaLibro') }}">Nuovo Libro</a></li>
+                    <li class="nav-item "><a class="nav-link active text-success fw-bold" href="{{ route('authors.creaLibro') }}">Nuovo Libro</a></li>
                 @endauth
                 
             </ul>
