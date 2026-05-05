@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\BookStoreRequest;
 use App\Models\_books;
+use App\Models\Author;
 use App\Models\Book;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,8 @@ class BookController extends Controller
         // ]);
 
         // dd('libri');
-        return view("addBooks");
+        $authors= Author::all();
+        return view('addBooks', compact('authors'));
     }
 
     public function store(BookStoreRequest $request)
@@ -42,7 +44,8 @@ class BookController extends Controller
             'name' => $request->input('name'),
             'pages' => $request->input('pages'),
             'year' => $request->input('year'),
-            'image' => $image
+            'image' => $image,
+            'author_id' => $request->input('author_id')
         ]);
 
         return redirect()->route('libreria')->with('success', 'libro creato con successo');

@@ -20,7 +20,7 @@
         </li>
         @auth
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{ route('creaLibro') }}">Aggiungi Nuovo libro</a>
+                <a class="nav-link active" aria-current="page" href="{{ route('creaLibro') }}"> Nuovo libro</a>
             </li>
         @endauth
 

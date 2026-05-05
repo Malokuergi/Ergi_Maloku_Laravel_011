@@ -20,7 +20,13 @@
         </li>
         @auth
             <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ route('authors.index') }}">Tutti gli autori</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{ route('creaLibro') }}">Aggiungi Nuovo libro</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ route('authors.create') }}">Aggiungi Nuovo autore</a>
             </li>
         @endauth
 

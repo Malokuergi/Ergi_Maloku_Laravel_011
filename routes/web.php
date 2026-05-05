@@ -18,6 +18,7 @@ Route:: put('/aggiorna{book}', [BookController::class, "update"])->name("update"
 Route::delete('/elimina-libro{book}', [BookController::class, "destroy"])->name("destroy");
 
 Route::resource('authors', AuthorController::class);
+Route::get('/Tutti-Autori', [AuthorController::class, "authors"])->name("listAutori");
 
 
 

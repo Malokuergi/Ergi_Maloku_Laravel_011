@@ -28,7 +28,14 @@
                     <input type="number" value="{{ old('year') }}" class="form-control" id="year" name="year"
                         placeholder="Anno di pubblicazione">
                 </div>
-
+                <div class="mb-3">
+                    <label for="selectAuthor" class="form-label">seleziona Autore</label>
+                    <select class="form-control" name="author_id" >
+                        @foreach ($authors as $author)
+                            <option value="{{ $author->id }}">{{$author->firstname}} {{$author->lastname}} </option>
+                        @endforeach
+                    </select>
+                </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Inserisci copertina</label>
                     <input class="form-control" type="file" id="formFile" name='image'>

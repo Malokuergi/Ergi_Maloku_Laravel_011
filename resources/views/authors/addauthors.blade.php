@@ -8,7 +8,7 @@
                     {{ session('success') }}
                 </div>
             @endif
-            <form action="{{ route('authors.saveBook') }}" method="POST" >
+            <form action="{{ route('authors.index') }}" method="POST" >
                 @csrf
                 <div class="mb-3">
                     <label for="name" class="form-label">Nome</label>
@@ -19,7 +19,7 @@
 
                 <div class="mb-3">
                     <label for="pages" class="form-label">Cognome</label>
-                    <input type="number" value="{{ old('lastname') }}" class="form-control" @error('lastname') is-invalid @enderror id="pages" name="lastname"
+                    <input type="text" value="{{ old('lastname') }}" class="form-control" @error('lastname') is-invalid @enderror id="pages" name="lastname"
                         placeholder="Inserisci il Cognome dell'autore">
                 </div>
 

@@ -20,7 +20,7 @@
 
                 <div class="mb-3">
                     <label for="pages" class="form-label">Pagine</label>
-                    <input type="number" value="{{ $author->lastname }}" class="form-control" @error('lastname') is-invalid @enderror id="pages" name="lastname"
+                    <input type="text" value="{{ $author->lastname }}" class="form-control" @error('lastname') is-invalid @enderror id="pages" name="lastname"
                         placeholder="Inserisci il Cognome dell' autore">
                 </div>
 
